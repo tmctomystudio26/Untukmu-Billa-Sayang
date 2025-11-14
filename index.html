@@ -38,32 +38,34 @@
     border: none !important;
     box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4) !important;
     transition: all 0.3s ease !important;
-    animation: pulse 2s infinite !important;
+    animation: glow 2s ease-in-out infinite !important;
     user-select: none !important;
     -webkit-tap-highlight-color: transparent !important;
     min-width: 200px !important;
     text-align: center !important;
     display: inline-block !important;
     margin: 20px auto !important;
+    position: relative !important;
+    z-index: 10 !important;
   }
 
   #ketgeser:hover {
-    transform: translateY(-5px) scale(1.05) !important;
+    transform: translateY(-3px) scale(1.03) !important;
     box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6) !important;
     animation: none !important;
   }
 
   #ketgeser:active {
-    transform: translateY(-2px) scale(1.02) !important;
-    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.5) !important;
+    transform: translateY(0) scale(0.98) !important;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.5) !important;
   }
 
-  @keyframes pulse {
+  @keyframes glow {
     0%, 100% {
-      transform: scale(1);
+      box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
     }
     50% {
-      transform: scale(1.05);
+      box-shadow: 0 10px 40px rgba(102, 126, 234, 0.7);
     }
   }
 
